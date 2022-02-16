@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  gap: 30px;
+  text-align-last: center;
+}
+
+.button {
+  padding: 20px 40px;
+  background-color: #2d78da;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+}
+
+section {
+  border-radius: 20px;
+}
+
+section .correct-answers {
+  background-color: forestgreen;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+section .correct-and-wrong-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .correct-and-wrong-container .wrong-answers {
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+section .remaining {
+  background-color: #2d78da;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+section .container {
+  padding-bottom: 20px;
+}
+
+section .container .question {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+section .container .answers {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+section .container .answers div {
+  background-color: #aca9a9;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 10px 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+section .container .answers div input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+section .container .answers .correct {
+  background-color: green;
+}
+
+section .container .answers .wrong {
+  background-color: red;
+}
+
+section .container .answers .selected {
+  background-color: blue;
+}
+
+section .container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .container .btn-container .next {
+  display: none;
+  border: 2px solid #2d78da;
+  background-color: white;
+  color: #2d78da;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+section .container .btn-container .next:hover {
+  background-color: #2d78da;
+  color: white;
+}
+
+section .container .btn-container .check {
+  border: 2px solid white;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+  display: none;
+}
+
+section .container .btn-container .check:hover {
+  border: 2px solid #2d78da;
+  background-color: white;
+  color: #2d78da;
+}
+
+section .container .btn-container button {
+  padding: 10px 20px;
+  background-color: #2d78da;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 50px;
+  -webkit-transition: 0.5s background-color ease;
+  transition: 0.5s background-color ease;
+}
+/*# sourceMappingURL=style.css.map */

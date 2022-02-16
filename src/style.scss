@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.welcome-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 30px;
+    text-align-last: center;
+}
+.button {
+    padding: 20px 40px;
+    background-color: rgb(45, 120, 218);
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+}
+
+
+section{
+    border-radius: 20px;
+    .correct-answers{
+        background-color:rgb(34, 139, 34);
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        border-radius: 50px;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 20px;
+        width: max-content;
+    }
+    .correct-and-wrong-container{
+        display: flex;
+        justify-content: space-between;
+        .wrong-answers{
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 20px;
+            width: max-content;
+        }
+    }
+    .remaining{
+        background-color: rgb(45, 120, 218);
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        text-decoration: none;
+        border-radius: 50px;
+        border: none;
+        padding: 10px 15px;
+        margin-top: 20px;
+        width: max-content;
+
+    }
+    .container{
+        padding-bottom: 20px;
+        .question{
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        .answers{
+            width: 100%;
+            height: max-content;
+            div{
+                background-color: rgb(172, 169, 169);
+                justify-content: center;
+                border-radius: 20px;
+                cursor: pointer;
+                user-select: none;
+                padding: 10px 20px;
+                width: 100%;
+                margin-bottom: 10px;
+                position: relative;
+                input{
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+            }
+            .correct{
+                background-color:green;
+            }
+            .wrong{
+                background-color:red;
+            }
+            .selected{
+                background-color:blue;
+            }
+        }
+
+        .btn-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .next{
+                display: none;
+                border: 2px solid rgb(45, 120, 218);
+                background-color:white;
+                color: rgb(45, 120, 218);
+                font-size: 20px;
+                font-weight: 500;
+                width: 100%;
+                &:hover{
+                    background-color:rgb(45, 120, 218);
+                    color: white;
+                }
+            }
+            .check{
+                border: 2px solid white;
+                font-size: 20px;
+                font-weight: 500;
+                width: 100%;
+                display: none;
+                &:hover{
+                    border:2px solid rgb(45, 120, 218);
+                    background-color:white;
+                    color: rgb(45, 120, 218);
+                }
+            }
+            button{
+                padding: 10px 20px;
+                background-color: rgb(45, 120, 218);
+                color: white;
+                font-size: 20px;
+                font-weight: 300;
+                text-decoration: none;
+                border-radius: 50px;
+                transition: 0.5s background-color ease;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+
+    React.useEffect(() => {
+        fetch('https://opentdb.com/api.php?amount=1&category=19&difficulty=hard&type=multiple')
+        .then(response => response.json())
+        .then(data => {
+            setQuestion(oldQuestion=>{
+                return(
+                    oldQuestion = data.results.map(result=>{
+
+                        function handleClick(e){
+                            let answers = document.querySelector('.answers')
+                             if(e.target.checked = true) {
+                                 for(let i = 0 ;i < answers.children.length ;i++){
+                                    answers.children[i].className = ''
+                                }
+                                 e.target.parentElement.classList = 'selected';
+                            }
+                        }
+                        function check(){
+                            let answers = document.querySelector('.answers')
+                            let selected = document.querySelector('.selected')
+                            let next = document.querySelector('.next')
+                            for(let i = 0; i < answers.children.length; i++) {
+                                if(answers.children[i].className !== 'selected'){
+                                    
+                                }else if(selected.dataset.value === result.correct_answer){
+                                    answers.children[i].classList = ''
+                                    selected.classList = 'correct'
+                                    answers.style.pointerEvents = 'none'
+                                    next.style.display = 'block'
+                                }else{
+                                    answers.children[i].className = ''
+                                    selected.classList = 'wrong'
+                                    next.style.display = 'block'
+                                    answers.style.pointerEvents = 'none'
+                                    if(answers.children[i].dataset.value === result.correct_answer){
+                                        answers.children[i].classList = 'correct'
+                                        next.style.display = 'block'
+                                    }
+                                }
+                            }
+                        }
+
+                        let answers = [result.correct_answer,result.incorrect_answers[0],result.incorrect_answers[1],result.incorrect_answers[2]]
+                        let sorted = answers.sort()
+
+                        console.log(result.correct_answer)
+                        return (
+                            <div key={nanoid()} className='container'>
+                                <p>{result.question}</p>
+                                <div className="answers">
+                                    <div onClick={handleClick} data-value={sorted[0]}>
+                                        {sorted[0]}
+                                        <input name="answers" type='radio'/>
+                                    </div>
+                                    <div onClick={handleClick} data-value={sorted[1]}>
+                                        {sorted[1]}
+                                        <input name="answers" type='radio'/>
+                                    </div>
+                                    <div onClick={handleClick} data-value={sorted[2]}>
+                                        {sorted[2]}
+                                        <input name="answers" type='radio'/>
+                                    </div>
+                                    <div onClick={handleClick} data-value={sorted[3]}>
+                                        {sorted[3]}
+                                        <input name="answers" type='radio'/>
+                                    </div>
+                                </div>
+                                <div className='button-container'>
+                                    <button className="check" onClick={check}>check</button>
+                                    <button className="next" onClick={handleNext}>next</button>
+                                </div>
+                            </div>
+                        )
+                    })
+                )
+            })
+        })
+    },[next])
