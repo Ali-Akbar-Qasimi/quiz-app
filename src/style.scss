@@ -79,6 +79,21 @@ section{
     }
     .container{
         padding-bottom: 20px;
+        .please-select{
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 20px;
+            width: max-content;
+            display: none;
+        }
+        .alert{
+            background-color: red;
+            display: none;
+        }
         .question{
             font-size: 1rem;
             font-weight: 300;
